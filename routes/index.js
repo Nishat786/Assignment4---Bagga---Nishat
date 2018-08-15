@@ -1,25 +1,30 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express Home' });
+  res.render('content/index', { 
+    title: 'Assignment#4' 
+  });
 });
 
-/* GET About page. */
+
+/* GET about page. */
 router.get('/about', function(req, res, next) {
-  res.render('about', { 
-    title: 'Express About',
+  res.render('content/about', { 
+    title: 'About Me',
     author: 'Nishat Bagga'
-});
+ });
 });
 
-/* GET Contact page. */
+/* GET contact page. */
 router.get('/contact', function(req, res, next) {
-  res.render('contact', { 
-    title: 'Express Contact Me',
-    author: 'NishatBagga ContactPage'
-});
+  res.render('content/contact', { 
+    title: 'Contact Me',
+    authors: ['Nishat Bagga']
+ });
 });
 
 module.exports = router;
+
+
